@@ -1,7 +1,7 @@
 import express from "express";
 import multer from 'multer'
 import {
-    // checking,
+    checking,
     validate_email
 } from "./controller.js";
 
@@ -28,4 +28,4 @@ const upload = multer({ storage });
 
 //  admin Routes
 routes.post('/validate_email', upload.single('file'), validate_email)
-// routes.get('/checking', checking)
+routes.get('/checking', checking)
